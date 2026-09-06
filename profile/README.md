@@ -32,8 +32,8 @@ adapté (`THIRD_PARTY_LICENSES.md`).
 ## 🔒 Et le reste ?
 
 EOQual couvre également la déconvolution, le débruitage, le rééchantillonnage et
-l'analyse de résolution (PSF/MTF, polynômes de Zernike). Ces modules existent et sont
-utilisés en interne chez Magellium ; ils ne sont pas publiés sur ce dépôt GitHub.
+l'analyse de résolution. Ces modules existent et sont
+utilisés en interne chez [Magellium](https://www.magellium.fr/) ; ils ne sont pas publiés sur ce dépôt GitHub.
 
 ## 📊 Cas d'usage typiques
 
