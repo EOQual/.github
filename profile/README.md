@@ -21,13 +21,20 @@ traitement EO.
 | Module | Rôle | Installation |
 |---|---|---|
 | [eoqual-metrics](https://github.com/EOQual/eoqual-metrics) | Métriques de qualité image Full-Reference (SSIM, erreurs pixel, corrélation, perceptuelles, spectrales) et No-Reference (BRISQUE/NIQE/PIQE, netteté multi-algorithmes dont MTF@Nyquist par méthode slanted-edge) | `pip install git+https://github.com/EOQual/eoqual-metrics.git` |
+| [eoqual-measure](https://github.com/EOQual/eoqual-measure) | Mesures physiques contrôlées de la qualité image (mire, bord choisi, source ponctuelle) : MTF par bord incliné (4 estimateurs comparés, ISO 12233), variance du bruit (6 estimateurs, courbe bruit–luminance), rapport de Strehl et énergie encerclée | `pip install git+https://github.com/EOQual/eoqual-measure.git` |
 | [eoqual-demosaicing](https://github.com/EOQual/eoqual-demosaicing) | 26 méthodes de démosaïçage Bayer, de l'interpolation simple aux méthodes à interpolation résiduelle (AHD, RI/GBTF/MLRI, LSLCD...) | `pip install git+https://github.com/EOQual/eoqual-demosaicing.git` |
 | [eoqual-destriping](https://github.com/EOQual/eoqual-destriping) | 9 méthodes de correction de bruit de strioscopie (appariement statistique, ondelettes, variationnelles, deep learning) | `pip install git+https://github.com/EOQual/eoqual-destriping.git` |
+| [eoqual-core](https://github.com/EOQual/eoqual-core) | Socle numérique commun aux modules (numpy/scipy seulement) : TFD d'image sans artefacts de bord, chaîne ESF → LSF → MTF, motifs de Bayer, PSF (Airy, Strehl, énergie encerclée) — installé automatiquement avec les modules qui l'utilisent | `pip install git+https://github.com/EOQual/eoqual-core.git` |
 | [pixoscope](https://github.com/EOQual/pixoscope) | Visualisateur d'images léger (TIFF/BigTIFF multi-Go, sans dépendance SIG) — application autonome, pas une librairie importable | `pip install git+https://github.com/EOQual/pixoscope.git` |
 
 Chaque module documente son propre catalogue de méthodes (`README.md`), le détail
 technique de chacune (`REFERENCE_TECHNIQUE.md`) et l'audit des licences du code tiers
 adapté (`THIRD_PARTY_LICENSES.md`).
+
+`eoqual-metrics` calcule des **indicateurs** de qualité, y compris sans référence sur une
+scène quelconque ; `eoqual-measure` fournit des **mesures physiques** sur cible ou protocole
+contrôlé. Les briques de calcul qu'ils partagent avec les autres modules vivent dans
+`eoqual-core`.
 
 ## 🔒 Et le reste ?
 
@@ -49,8 +56,10 @@ Chaque module s'installe indépendamment (voir tableau ci-dessus). Namespace uni
 
 ```python
 import eoqual.metrics
+import eoqual.measure
 import eoqual.demosaicing
 import eoqual.destriping
+import eoqual.core
 ```
 
 ## 🤝 Contribuer
