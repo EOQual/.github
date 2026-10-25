@@ -25,6 +25,7 @@ traitement EO.
 | [eoqual-demosaicing](https://github.com/EOQual/eoqual-demosaicing) | 26 méthodes de démosaïçage Bayer, de l'interpolation simple aux méthodes à interpolation résiduelle (AHD, RI/GBTF/MLRI, LSLCD...) | `pip install git+https://github.com/EOQual/eoqual-demosaicing.git` |
 | [eoqual-destriping](https://github.com/EOQual/eoqual-destriping) | 9 méthodes de correction de bruit de strioscopie (appariement statistique, ondelettes, variationnelles, deep learning) | `pip install git+https://github.com/EOQual/eoqual-destriping.git` |
 | [eoqual-core](https://github.com/EOQual/eoqual-core) | Socle numérique commun aux modules (numpy/scipy seulement) : TFD d'image sans artefacts de bord, chaîne ESF → LSF → MTF, motifs de Bayer, PSF (Airy, Strehl, énergie encerclée) — installé automatiquement avec les modules qui l'utilisent | `pip install git+https://github.com/EOQual/eoqual-core.git` |
+| [eoqual-viz](https://github.com/EOQual/eoqual-viz) | Fonctions graphiques génériques communes aux modules (numpy/plotly seulement) : heatmap 2D interactive, comparaison de courbes/coupes avec repères verticaux — installé automatiquement avec les modules qui l'utilisent. Ne remplace pas [pixoscope](https://github.com/EOQual/pixoscope) (application de visualisation autonome, pas une bibliothèque) | `pip install git+https://github.com/EOQual/eoqual-viz.git` |
 | [pixoscope](https://github.com/EOQual/pixoscope) | Visualisateur d'images léger (TIFF/BigTIFF multi-Go, sans dépendance SIG) — application autonome, pas une librairie importable | `pip install git+https://github.com/EOQual/pixoscope.git` |
 
 Chaque module documente son propre catalogue de méthodes (`README.md`), le détail
@@ -60,6 +61,7 @@ import eoqual.measure
 import eoqual.demosaicing
 import eoqual.destriping
 import eoqual.core
+import eoqual.viz
 ```
 
 ## 🤝 Contribuer
