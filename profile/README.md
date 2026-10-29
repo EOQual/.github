@@ -42,12 +42,6 @@ scène quelconque ; `eoqual-measure` fournit des **mesures physiques** sur cible
 contrôlé. Les briques de calcul qu'ils partagent avec les autres modules vivent dans
 `eoqual-core`.
 
-## 🔒 Et le reste ?
-
-EOQual couvre également la déconvolution, le rééchantillonnage et l'analyse de
-résolution. Ces modules existent et sont
-utilisés en interne chez [Magellium](https://www.magellium.fr/) ; ils ne sont pas publiés sur ce dépôt GitHub.
-
 ## 📊 Cas d'usage typiques
 
 * Validation de produits dérivés satellite
