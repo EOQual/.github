@@ -25,11 +25,12 @@ traitement EO.
 | [eoqual-demosaicing](https://github.com/EOQual/eoqual-demosaicing) | 26 méthodes de démosaïçage Bayer, de l'interpolation simple aux méthodes à interpolation résiduelle (AHD, RI/GBTF/MLRI, LSLCD...) | `pip install git+https://github.com/EOQual/eoqual-demosaicing.git` |
 | [eoqual-destriping](https://github.com/EOQual/eoqual-destriping) | 9 méthodes de correction de bruit de strioscopie (appariement statistique, ondelettes, variationnelles, deep learning) | `pip install git+https://github.com/EOQual/eoqual-destriping.git` |
 | [eoqual-denoising](https://github.com/EOQual/eoqual-denoising) | 17 méthodes de débruitage d'images (filtres, variation totale, ondelettes, non locales dont NL-Bayes en couleur et NL-Ridge réimplémentés sous MIT, réseaux pré-entraînés via DeepInverse), stabilisation de variance du bruit poisson-gaussien des images brutes (Anscombe généralisée, inverse exacte non biaisée), optimisation bayésienne des paramètres et benchmark — **en cours de développement** ⚠️ | `pip install git+https://github.com/EOQual/eoqual-denoising.git` |
-| [eoqual-core](https://github.com/EOQual/eoqual-core) | Socle numérique commun aux modules (numpy/scipy seulement) : TFD d'image sans artefacts de bord, chaîne ESF → LSF → MTF, motifs de Bayer, PSF (Airy, Strehl, énergie encerclée) — installé automatiquement avec les modules qui l'utilisent | `pip install git+https://github.com/EOQual/eoqual-core.git` |
-| [eoqual-viz](https://github.com/EOQual/eoqual-viz) | Fonctions graphiques génériques communes aux modules (numpy/plotly seulement) : heatmap 2D interactive, comparaison de courbes/coupes avec repères verticaux — installé automatiquement avec les modules qui l'utilisent. Ne remplace pas [pixoscope](https://github.com/EOQual/pixoscope) (application de visualisation autonome, pas une bibliothèque) | `pip install git+https://github.com/EOQual/eoqual-viz.git` |
+| [eoqual-deconvolution](https://github.com/EOQual/eoqual-deconvolution) | 11 méthodes de déconvolution d'images à PSF connue ou estimée : linéaires (Wiener à spectre ajusté, Tikhonov avec choix automatique du paramètre), itératives (Richardson-Lucy accéléré, Landweber), variationnelles (variation totale, parcimonie en ondelettes), Plug-and-Play sur les débruiteurs d'eoqual-denoising, déconvolution aveugle ; traitement des bords, optimisation bayésienne des paramètres et benchmark — **en cours de développement** ⚠️ | `pip install git+https://github.com/EOQual/eoqual-deconvolution.git` |
+| [eoqual-core](https://github.com/EOQual/eoqual-core) | Socle numérique commun aux modules (numpy/scipy seulement) : TFD d'image sans artefacts de bord, chaîne ESF → LSF → MTF, motifs de Bayer, PSF (Airy, profils intégrés sur le pixel, Strehl, énergie encerclée), fonction de transfert d'un noyau, estimation du bruit — installé automatiquement avec les modules qui l'utilisent | `pip install git+https://github.com/EOQual/eoqual-core.git` |
+| [eoqual-viz](https://github.com/EOQual/eoqual-viz) | Fonctions graphiques génériques communes aux modules (numpy/plotly seulement) : heatmap 2D interactive, galerie d'images, courbes multiples, comparaison de courbes/coupes avec repères verticaux — installé automatiquement avec les modules qui l'utilisent. Ne remplace pas [pixoscope](https://github.com/EOQual/pixoscope) (application de visualisation autonome, pas une bibliothèque) | `pip install git+https://github.com/EOQual/eoqual-viz.git` |
 | [pixoscope](https://github.com/EOQual/pixoscope) | Visualisateur d'images léger (TIFF/BigTIFF multi-Go, sans dépendance SIG) — application autonome, pas une librairie importable | `pip install git+https://github.com/EOQual/pixoscope.git` |
 
-> ⚠️ **eoqual-measure et eoqual-denoising sont en cours de développement.** Leurs méthodes sont validées sur
+> ⚠️ **eoqual-measure, eoqual-denoising et eoqual-deconvolution sont en cours de développement.** Leurs méthodes sont validées sur
 > données simulées ou images de test mais pas encore qualifiées sur données réelles ; l'API peut
 > évoluer et des bugs ou des anomalies sont possibles. Merci de les signaler par une issue sur le dépôt du module.
 
@@ -60,6 +61,7 @@ import eoqual.measure
 import eoqual.demosaicing
 import eoqual.destriping
 import eoqual.denoising
+import eoqual.deconvolution
 import eoqual.core
 import eoqual.viz
 ```
