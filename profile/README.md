@@ -72,8 +72,9 @@ corrigée.
 > évoluer et des bugs ou des anomalies sont possibles. Merci de les signaler par une issue sur le dépôt du module.
 
 Chaque module documente son propre catalogue de méthodes (`README.md`), le détail
-technique de chacune (`REFERENCE_TECHNIQUE.md`) et l'audit des licences du code tiers
-adapté (`THIRD_PARTY_LICENSES.md`).
+technique de chacune (documents de `docs/technique/`, publiés avec la référence de l'API
+et les notes de version sur le site du module), l'évolution d'une version à l'autre
+(`CHANGELOG.md`) et l'audit des licences du code tiers adapté (`THIRD_PARTY_LICENSES.md`).
 
 `eoqual-metrics` calcule des **indicateurs** de qualité, y compris sans référence sur une
 scène quelconque ; `eoqual-measure` fournit des **mesures physiques** sur cible ou protocole
