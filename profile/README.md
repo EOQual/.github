@@ -16,6 +16,40 @@ limites et l'origine (licence) du code repris à des tiers.
 EOQual fait le lien entre l'expérimentation R&D et l'industrialisation de chaînes de
 traitement EO.
 
+### Philosophie
+
+> « Aujourd'hui, la seule manière durable de faire du logiciel libre semble être de le
+> traiter comme un projet personnel qui se trouve avoir des utilisateurs, et non comme un
+> produit. »
+>
+> — Linus, de l'équipe OwnTracks, cité par Jan-Piet Mens,
+> [« It has to be fun… »](https://jpmens.net/2026/11/21/it-has-to-be-fun/), 21 novembre 2026
+
+EOQual est développé dans cet esprit. Ses modules sont des projets personnels, publiés
+parce qu'ils peuvent servir à d'autres. Ils ne sont pas un produit : pas d'engagement de
+support, de calendrier ni de compatibilité ascendante, et les évolutions suivent les besoins
+et le temps de l'auteur. Ce que chaque module promet en revanche, c'est de documenter ses
+méthodes, leur validation et leurs limites, et de corriger les erreurs qu'on lui signale.
+
+### Comment ces modules sont développés
+
+Les méthodes, les références et les choix scientifiques viennent de l'auteur, de son
+expérience et de sa veille bibliographique. Pour les mettre en œuvre, l'auteur s'aide
+d'assistants d'intelligence artificielle, sous son contrôle constant. Ces assistants ont
+aidé à écrire et tester le code, à rédiger la documentation, à proposer des compléments et
+à repérer et corriger des erreurs. L'auteur a fixé les méthodes, les sources et les choix
+techniques, et relu, corrigé ou refusé chaque proposition.
+
+L'intelligence artificielle est employée ici comme un outil de plus, au même titre que les
+moteurs de recherche ou l'accès en ligne aux publications. Elle ne remplace ni la compétence
+ni la responsabilité de l'auteur, qui assume l'intégralité du code et de la documentation.
+Les méthodes sont validées par des tests sur données simulées à vérité connue, et les
+chiffres des documents techniques sont produits par des scripts fournis avec chaque module :
+ils sont vérifiables et reproductibles. Malgré cette vérification, une erreur (bogue, formule
+ou valeur inexacte, référence erronée, code repris d'une source sans la citer) a pu
+subsister. Merci de la signaler par une issue sur le dépôt du module concerné : elle sera
+corrigée.
+
 ## 📦 Modules publics
 
 | Module | Rôle | Installation |
@@ -72,8 +106,8 @@ import eoqual.viz
 
 ## 🤝 Contribuer
 
-Bug, méthode manquante, algorithme à ajouter, erreur de licence : ouvrez une issue sur
-le dépôt du module concerné.
+Bug, erreur dans la documentation, méthode manquante, algorithme à ajouter, erreur de
+licence ou de citation : ouvrez une issue sur le dépôt du module concerné.
 
 ## 📄 Licence
 
